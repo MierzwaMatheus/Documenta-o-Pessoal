@@ -5,8 +5,6 @@ description: Detalhes sobre a criação do projeto React/Next.js e a configuraç
 tags: [configuracao, tailwind, react, nextjs, vite]
 ---
 
-# Configuração Base do Projeto
-
 ## Criação do Projeto
 
 Para projetos com **Vite + React**:

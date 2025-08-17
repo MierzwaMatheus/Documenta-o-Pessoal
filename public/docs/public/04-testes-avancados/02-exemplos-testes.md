@@ -5,8 +5,6 @@ description: Exemplos práticos de testes unitários para componentes e hooks, e
 tags: [testes, unitarios, e2e, playwright]
 ---
 
-# Exemplos de Testes
-
 ## Exemplos de Testes
 
 #### Teste de Componente Button

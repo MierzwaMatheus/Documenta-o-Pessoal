@@ -5,8 +5,6 @@ description: Detalhes sobre a filosofia e implementação de um sistema de cores
 tags: [cores, tailwind, design-system, theming]
 ---
 
-# Sistema de Cores Reutilizável
-
 ## Filosofia do Sistema de Cores
 
 Um sistema de cores bem estruturado é a base de qualquer design system eficiente. O objetivo é criar uma paleta que seja semanticamente clara, visualmente harmoniosa e facilmente escalável. Em vez de usar cores específicas como `blue-500` ou `red-600` diretamente nos componentes, utilizamos nomes semânticos que descrevem a função da cor no contexto da interface.

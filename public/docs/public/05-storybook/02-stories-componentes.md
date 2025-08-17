@@ -5,8 +5,6 @@ description: Exemplos de como criar stories para os componentes Button, Input e 
 tags: [storybook, componentes, stories, button, input, themetoggle]
 ---
 
-# Stories dos Componentes Base
-
 ## Stories dos Componentes Base
 
 #### Story do Button (src/components/ui/Button.stories.tsx)

@@ -5,8 +5,6 @@ description: Convenções de nomenclatura, performance, acessibilidade e documen
 tags: [boas-praticas, performance, acessibilidade, documentacao]
 ---
 
-# Boas Práticas e Dicas
-
 ## Convenções de Nomenclatura
 
 Estabeleça convenções claras para manter a consistência:

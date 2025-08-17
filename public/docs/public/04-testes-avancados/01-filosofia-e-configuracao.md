@@ -5,8 +5,6 @@ description: Detalhes sobre a filosofia de testes e a configuração do ambiente
 tags: [testes, vitest, msw, qualidade]
 ---
 
-# Setup para Testes Avançados
-
 ## Filosofia de Testes
 
 Um sistema de testes robusto é fundamental para manter a qualidade e confiabilidade do código ao longo do tempo. A estratégia de testes deve cobrir diferentes níveis: unitários (componentes isolados), integração (interação entre componentes) e end-to-end (fluxos completos do usuário). Esta abordagem em camadas garante que bugs sejam detectados precocemente e que refatorações possam ser feitas com confiança.

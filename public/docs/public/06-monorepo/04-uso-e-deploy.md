@@ -3,9 +3,7 @@ title: Uso e Deploy de Monorepo
 order: 4
 description: Como usar os packages compartilhados e configurar o deploy de um monorepo no Vercel.
 tags: [monorepo, deploy, vercel, ci/cd]
--
-
-# Uso e Deploy de Monorepo
+---
 
 ## Uso dos Packages Compartilhados
 

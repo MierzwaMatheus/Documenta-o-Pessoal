@@ -5,8 +5,6 @@ description: Organização de pastas e arquivos para projetos React/Next.js com 
 tags: [estrutura, arquivos, organização]
 ---
 
-# Estrutura de Arquivos Recomendada
-
 ## Organização do Projeto
 
 Uma estrutura de arquivos bem organizada é fundamental para a manutenibilidade e escalabilidade do projeto. A seguir está a estrutura recomendada que funciona tanto para Vite quanto para Next.js:

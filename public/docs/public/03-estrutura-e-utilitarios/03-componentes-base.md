@@ -5,8 +5,6 @@ description: Exemplos de componentes reutilizáveis como Button, Input, Card e M
 tags: [componentes, ui, design-system]
 ---
 
-# Componentes Base
-
 ## Sistema de Design Consistente
 
 Para manter consistência visual e facilitar a manutenção, é essencial criar um conjunto de componentes base reutilizáveis. Estes componentes seguem as cores semânticas definidas anteriormente e incluem variações para diferentes estados e tamanhos.

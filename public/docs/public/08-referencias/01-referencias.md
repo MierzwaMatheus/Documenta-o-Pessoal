@@ -5,7 +5,7 @@ description: Lista de referências utilizadas na criação deste guia.
 tags: [referencias, links]
 ---
 
-# Referências
+## Referências
 
 [1] Tailwind CSS - Dark Mode Documentation. Disponível em: https://tailwindcss.com/docs/dark-mode
 

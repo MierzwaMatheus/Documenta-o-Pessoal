@@ -5,8 +5,6 @@ description: Guia para configurar um monorepo com Turborepo, incluindo estrutura
 tags: [monorepo, turborepo, estrutura, configuracao]
 ---
 
-# Setup para Monorepo
-
 ## Introdução aos Monorepos
 
 Um monorepo é uma estratégia de organização de código onde múltiplos projetos relacionados são mantidos em um único repositório. Esta abordagem oferece vantagens significativas para equipes que desenvolvem múltiplas aplicações que compartilham código, como um site principal, dashboard administrativo, aplicativo mobile e bibliotecas de componentes.

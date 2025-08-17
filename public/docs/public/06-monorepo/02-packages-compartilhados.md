@@ -5,8 +5,6 @@ description: Detalhes sobre a configuração e estrutura de packages compartilha
 tags: [monorepo, packages, shared-code]
 ---
 
-# Packages Compartilhados
-
 ## Configuração do Package UI Compartilhado
 
 Crie `packages/ui/package.json`:

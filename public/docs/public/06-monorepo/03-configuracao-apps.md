@@ -5,8 +5,6 @@ description: Detalhes sobre a configuração de aplicações individuais (web e 
 tags: [monorepo, apps, configuracao, nextjs, vite]
 ---
 
-# Configuração das Aplicações
-
 ## Configuração das Apps
 
 #### App Web (apps/web/package.json)

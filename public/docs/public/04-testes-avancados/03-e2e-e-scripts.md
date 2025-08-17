@@ -3,9 +3,7 @@ title: Testes E2E e Scripts
 order: 3
 description: Configuração de testes End-to-End com Playwright e scripts NPM para execução de testes.
 tags: [testes, e2e, playwright, scripts]
--
-
-# Testes E2E e Scripts
+---
 
 ## Configuração de Testes E2E com Playwright
 

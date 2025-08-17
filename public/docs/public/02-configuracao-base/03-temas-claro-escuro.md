@@ -5,8 +5,6 @@ description: Guia detalhado para implementar temas claro e escuro em projetos Re
 tags: [temas, dark-mode, light-mode, react, tailwind]
 ---
 
-# Configuração de Temas Claro/Escuro
-
 ## Hook Personalizado para Gerenciamento de Tema
 
 Crie um hook customizado para gerenciar o estado do tema de forma eficiente. Crie o arquivo `src/hooks/useTheme.ts`:

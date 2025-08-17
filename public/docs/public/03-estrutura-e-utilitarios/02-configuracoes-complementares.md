@@ -5,8 +5,6 @@ description: Configurações adicionais para ESLint, Prettier, fontes, ícones e
 tags: [configuracao, eslint, prettier, fontes, icones, animacoes]
 ---
 
-# Configurações Complementares
-
 ## ESLint e Prettier
 
 Configure ferramentas de qualidade de código. Instale as dependências:

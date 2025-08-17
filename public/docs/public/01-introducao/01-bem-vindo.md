@@ -5,10 +5,7 @@ description: Introdução ao guia completo para template inicial de projetos Rea
 tags: [introducao, guia, react, tailwind]
 ---
 
-# Guia Completo: Template Inicial para Projetos React + Tailwind CSS
-
-**Autor:** Manus AI  
-**Data:** 17 de agosto de 2025
+## Guia Completo: Template Inicial para Projetos React + Tailwind CSS
 
 Este guia apresenta uma metodologia completa para criar templates iniciais padronizados para projetos React utilizando Vite ou Next.js em conjunto com Tailwind CSS. O foco principal está na criação de um sistema de cores reutilizável, configuração eficiente de temas claro e escuro, e estabelecimento de uma base sólida que possa ser facilmente replicada em diferentes projetos.
 

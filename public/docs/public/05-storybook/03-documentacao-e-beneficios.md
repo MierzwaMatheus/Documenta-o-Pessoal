@@ -3,9 +3,7 @@ title: Documentação e Benefícios do Storybook
 order: 3
 description: Como usar o Storybook para documentação automática e os benefícios de sua implementação.
 tags: [storybook, documentacao, beneficios, ci/cd]
--
-
-# Documentação e Benefícios do Storybook
+---
 
 ## Documentação Automática
 

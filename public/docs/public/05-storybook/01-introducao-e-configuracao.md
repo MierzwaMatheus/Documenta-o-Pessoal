@@ -3,9 +3,7 @@ title: Introdução e Configuração do Storybook
 order: 1
 description: Guia para instalar e configurar o Storybook para documentação de componentes.
 tags: [storybook, documentacao, componentes, ui]
--
-
-# Configuração de Storybook
+---
 
 ## Introdução ao Storybook
 
