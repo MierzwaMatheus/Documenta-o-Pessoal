@@ -30,9 +30,7 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <div
-              className={`flex flex-col w-full min-h-screen bg-background text-foreground transition-colors ${
-                theme === "dark" ? "dark" : ""
-              }`}
+              className="flex flex-col w-full min-h-screen bg-background text-foreground transition-colors"
             >
               <Header />
               <Routes>
