@@ -194,7 +194,7 @@ const InPageSearch: React.FC<InPageSearchProps> = ({ htmlContent }) => {
       if (highlightElements.length > 0) {
         highlightElements[0].classList.add(
           "current-search-match",
-          "bg-orange-300",
+          "bg-accent",
           "ring-2",
           "ring-orange-500"
         );
@@ -315,7 +315,7 @@ const InPageSearch: React.FC<InPageSearchProps> = ({ htmlContent }) => {
   return (
     <div
       ref={searchContainerRef}
-      className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-4 min-w-80 transition-colors"
+      className="fixed top-4 right-4 z-50 bg-card border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-4 min-w-80 transition-colors"
     >
       <div className="flex items-center gap-2 mb-2">
         <Search className="w-4 h-4 text-gray-500 dark:text-gray-400 transition-colors" />
@@ -375,7 +375,7 @@ const InPageSearch: React.FC<InPageSearchProps> = ({ htmlContent }) => {
               key={index}
               className={`in-page-search-result-item p-2 text-sm cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 rounded transition-colors ${
                 index === currentMatchIndex
-                  ? "bg-blue-100 dark:bg-blue-900/50"
+                  ? "bg-primary"
                   : ""
               }`}
               onClick={() => navigateToMatch(index)}

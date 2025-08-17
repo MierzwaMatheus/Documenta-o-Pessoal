@@ -119,19 +119,19 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
   if (error) {
     return (
       <div className="p-8 max-w-4xl mx-auto">
-        <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-6">
-          <h1 className="text-2xl font-bold text-destructive mb-4">{title}</h1>
-          <p className="text-destructive mb-4">{error}</p>
+        <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-6 transition-colors">
+          <h1 className="text-2xl font-bold text-destructive mb-4 transition-colors">{title}</h1>
+          <p className="text-destructive mb-4 transition-colors">{error}</p>
           <div className="space-x-4">
             <a
               href="/"
-              className="text-primary hover:text-primary/80 underline"
+              className="text-primary hover:text-primary/80 underline transition-colors"
             >
               ← Voltar para a página inicial
             </a>
             <a
               href="/public/1_Publicas/bem-vindo"
-              className="text-primary hover:text-primary/80 underline"
+              className="text-primary hover:text-primary/80 underline transition-colors"
             >
               Ir para a documentação pública
             </a>
@@ -146,10 +146,10 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
       <div className="flex flex-col xl:flex-row gap-8">
         {/* Conteúdo principal */}
         <div className="flex-1 min-w-0 order-2 xl:order-1">
-          <article className="bg-card dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 md:p-8 max-w-4xl mx-auto transition-colors">
+          <article className="bg-card rounded-lg border border-border p-4 md:p-8 max-w-4xl mx-auto transition-colors">
             {/* Cabeçalho do documento */}
-            <header className="mb-8 pb-6 border-b border-gray-200 dark:border-gray-700 transition-colors">
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2 transition-colors">
+            <header className="mb-8 pb-6 border-b border-border transition-colors">
+              <h1 className="text-4xl font-bold text-foreground mb-2 transition-colors">
                 {title}
               </h1>
 
@@ -157,7 +157,7 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
               {(metadata.description || metadata.tags) && (
                 <div className="mt-4 space-y-2">
                   {metadata.description && (
-                    <p className="text-lg text-gray-600 dark:text-gray-300 transition-colors">
+                    <p className="text-lg text-muted-foreground transition-colors">
                       {metadata.description}
                     </p>
                   )}
@@ -167,7 +167,7 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
                       {metadata.tags.map((tag: string, index: number) => (
                         <span
                           key={index}
-                          className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 text-sm rounded-md transition-colors"
+                          className="px-2 py-1 bg-primary text-primary-foreground text-sm rounded-md transition-colors"
                         >
                           {tag}
                         </span>
@@ -178,7 +178,7 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
               )}
 
               {/* Breadcrumb */}
-              <div className="mt-4 text-sm text-gray-500 dark:text-gray-400 transition-colors">
+              <div className="mt-4 text-sm text-muted-foreground transition-colors">
                 <span>
                   📍 /{type}/{docPath || "(raiz)"}
                 </span>
@@ -188,15 +188,15 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
             {/* Conteúdo do documento */}
             <div
               className="markdown-body prose prose-slate max-w-none
-                         prose-headings:text-gray-900 dark:prose-headings:text-gray-100
-                         prose-p:text-gray-700 dark:prose-p:text-gray-300
-                         prose-strong:text-gray-900 dark:prose-strong:text-gray-100
-                         prose-code:text-blue-600 dark:prose-code:text-blue-400 prose-code:bg-blue-50 dark:prose-code:bg-blue-900/30 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
-                         prose-pre:bg-gray-50 dark:prose-pre:bg-gray-800 prose-pre:border dark:prose-pre:border-gray-700
-                         prose-blockquote:text-gray-600 dark:prose-blockquote:text-gray-400 prose-blockquote:border-l-blue-500 dark:prose-blockquote:border-l-blue-400
-                         prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300
-                         prose-table:text-gray-700 dark:prose-table:text-gray-300
-                         prose-th:text-gray-900 dark:prose-th:text-gray-100 prose-td:text-gray-700 dark:prose-td:text-gray-300
+                         prose-headings:text-foreground
+                         prose-p:text-muted-foreground
+                         prose-strong:text-foreground
+                         prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                         prose-pre:bg-muted prose-pre:border prose-pre:border-border
+                         prose-blockquote:text-muted-foreground prose-blockquote:border-l-primary
+                         prose-a:text-primary hover:prose-a:text-primary/80
+                         prose-table:text-muted-foreground
+                         prose-th:text-foreground prose-td:text-muted-foreground
                          prose-img:max-w-full prose-img:h-auto
                          break-words transition-colors"
               dangerouslySetInnerHTML={{ __html: htmlContent }}

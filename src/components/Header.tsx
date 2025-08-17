@@ -39,10 +39,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-blue-400 to-purple-400 dark:bg-gradient-to-r dark:from-[#0171bd] dark:to-[#940078] border-b border-gray-200 dark:border-gray-700 px-6 py-4 sticky top-0 z-10 h-[75px] transition-colors">
+    <header className="bg-primary border-b border-border px-6 py-4 sticky top-0 z-10 h-[75px] transition-colors">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <div className="h-8 w-8 bg-white/30 dark:bg-white/20 rounded-lg flex items-center justify-center transition-colors backdrop-blur-sm">
+          <div className="h-8 w-8 bg-primary/30 rounded-lg flex items-center justify-center transition-colors backdrop-blur-sm">
             <svg
               className="h-5 w-5 text-white"
               fill="none"
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
               />
             </svg>
           </div>
-          <h1 className="text-xl font-semibold text-white dark:text-white transition-colors drop-shadow-sm">
+          <h1 className="text-xl font-semibold text-primary-foreground transition-colors drop-shadow-sm">
             InBot Docs
           </h1>
         </div>
@@ -68,12 +68,12 @@ const Header: React.FC = () => {
 
           {!isHomePage && !isPublicRoute && user && (
             <>
-              <div className="text-sm text-white/90 dark:text-white/90 transition-colors drop-shadow-sm">
+              <div className="text-sm text-primary-foreground/90 transition-colors drop-shadow-sm">
                 Olá, <span className="font-medium">{user?.email}</span>
               </div>
               <button
                 onClick={handleLogout}
-                className="inline-flex items-center px-3 py-2 border border-white/30 dark:border-white/30 shadow-sm text-sm leading-4 font-medium rounded-md text-white dark:text-white bg-white/20 dark:bg-white/20 hover:bg-white/30 dark:hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/50 dark:focus:ring-white/50 transition-colors backdrop-blur-sm"
+                className="inline-flex items-center px-3 py-2 border border-primary-foreground/30 shadow-sm text-sm leading-4 font-medium rounded-md text-primary-foreground bg-primary/20 hover:bg-primary/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-foreground/50 transition-colors backdrop-blur-sm"
               >
                 <svg
                   className="h-4 w-4 mr-2"

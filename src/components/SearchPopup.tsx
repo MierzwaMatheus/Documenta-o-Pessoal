@@ -46,7 +46,7 @@ const SearchPopup: React.FC<SearchPopupProps> = ({
       regex.test(part) ? (
         <mark
           key={index}
-          className="bg-yellow-200 dark:bg-yellow-800 text-yellow-900 dark:text-yellow-100 px-1 rounded transition-colors"
+          className="bg-accent text-accent-foreground px-1 rounded transition-colors"
         >
           {part}
         </mark>
@@ -64,12 +64,12 @@ const SearchPopup: React.FC<SearchPopupProps> = ({
       <div className="fixed inset-0 z-40" onClick={onClose} />
 
       {/* Popup de resultados */}
-      <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto transition-colors">
+      <div className="absolute top-full left-0 right-0 mt-2 bg-background border border-border rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto transition-colors">
         {isLoading ? (
           <div className="p-4 text-center">
             <div className="inline-flex items-center">
               <svg
-                className="animate-spin -ml-1 mr-3 h-5 w-5 text-blue-600"
+                className="animate-spin -ml-1 mr-3 h-5 w-5 text-primary"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -88,15 +88,15 @@ const SearchPopup: React.FC<SearchPopupProps> = ({
                   d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                 ></path>
               </svg>
-              <span className="text-gray-600 dark:text-gray-300 transition-colors">
+              <span className="text-muted-foreground transition-colors">
                 Buscando...
               </span>
             </div>
           </div>
         ) : searchResults.length === 0 ? (
-          <div className="p-4 text-center text-gray-500 dark:text-gray-400 transition-colors">
+          <div className="p-4 text-center text-muted-foreground transition-colors">
             <svg
-              className="mx-auto h-12 w-12 text-gray-400 dark:text-gray-500 mb-2 transition-colors"
+              className="mx-auto h-12 w-12 text-muted-foreground/70 mb-2 transition-colors"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -114,10 +114,10 @@ const SearchPopup: React.FC<SearchPopupProps> = ({
             </p>
           </div>
         ) : (
-          <div className="divide-y divide-gray-100 dark:divide-gray-700">
+          <div className="divide-y divide-border">
             {/* Cabeçalho com contagem */}
-            <div className="px-4 py-3 bg-gray-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600 transition-colors">
-              <p className="text-sm text-gray-600 dark:text-gray-300 transition-colors">
+            <div className="px-4 py-3 bg-muted border-b border-border transition-colors">
+              <p className="text-sm text-muted-foreground transition-colors">
                 {searchResults.length} resultado
                 {searchResults.length !== 1 ? "s" : ""} encontrado
                 {searchResults.length !== 1 ? "s" : ""} para "{searchTerm}"
@@ -129,22 +129,22 @@ const SearchPopup: React.FC<SearchPopupProps> = ({
               {searchResults.map((result, index) => (
                 <div
                   key={`${result.path}-${index}`}
-                  className="p-4 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors"
+                  className="p-4 hover:bg-muted cursor-pointer transition-colors"
                   onClick={() => handleResultClick(result.path)}
                 >
                   {/* Título e seção */}
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg font-medium text-foreground hover:text-primary transition-colors">
                       {highlightText(result.title, searchTerm)}
                     </h3>
-                    <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 flex-shrink-0 transition-colors">
+                    <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-primary flex-shrink-0 transition-colors">
                       {result.section}
                     </span>
                   </div>
 
                   {/* Descrição */}
                   {result.description && (
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-2 transition-colors">
+                    <p className="text-sm text-muted-foreground mb-2 transition-colors">
                       {highlightText(result.description, searchTerm)}
                     </p>
                   )}
@@ -155,7 +155,7 @@ const SearchPopup: React.FC<SearchPopupProps> = ({
                       {result.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors"
+                          className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground transition-colors"
                         >
                           {highlightText(tag, searchTerm)}
                         </span>
@@ -166,20 +166,20 @@ const SearchPopup: React.FC<SearchPopupProps> = ({
                   {/* Matches de conteúdo */}
                   {result.contentMatches.length > 0 && (
                     <div className="mt-3">
-                      <h4 className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2 transition-colors">
+                      <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2 transition-colors">
                         Trechos encontrados:
                       </h4>
                       <div className="space-y-2">
                         {result.contentMatches.map((match, matchIndex) => (
                           <div
                             key={matchIndex}
-                            className="text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700 p-2 rounded border-l-2 border-blue-200 dark:border-blue-400 transition-colors"
+                            className="text-sm text-foreground bg-muted p-2 rounded border-l-2 border-primary/40 transition-colors"
                           >
-                            <span className="text-gray-500 dark:text-gray-400 transition-colors">
+                            <span className="text-muted-foreground transition-colors">
                               ...
                             </span>
                             {highlightText(match.context, searchTerm)}
-                            <span className="text-gray-500 dark:text-gray-400 transition-colors">
+                            <span className="text-muted-foreground transition-colors">
                               ...
                             </span>
                           </div>
@@ -190,7 +190,7 @@ const SearchPopup: React.FC<SearchPopupProps> = ({
 
                   {/* Score de relevância (apenas para debug em desenvolvimento) */}
                   {process.env.NODE_ENV === "development" && (
-                    <div className="mt-2 text-xs text-gray-400 dark:text-gray-500 transition-colors">
+                    <div className="mt-2 text-xs text-muted-foreground/70 transition-colors">
                       Score: {result.score}
                     </div>
                   )}

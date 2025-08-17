@@ -36,8 +36,8 @@ const RenderPage: React.FC<{
         to={page.path}
         className={`group flex items-center gap-2 p-2 rounded-md transition-all duration-200 ${
           isActive
-            ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold border-l-2 border-blue-500 dark:border-blue-400"
-            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400 hover:translate-x-1"
+            ? "bg-accent/20 text-accent font-semibold border-l-2 border-accent"
+            : "text-muted-foreground hover:bg-muted hover:text-accent hover:translate-x-1"
         }`}
       >
         <FileText size={14} className="flex-shrink-0" />
@@ -61,7 +61,7 @@ const RenderSection: React.FC<{
   isItemActive: (path: string) => boolean;
 }> = ({ section, isItemActive }) => (
   <div className="mb-4">
-    <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3 px-2 transition-colors">
+    <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-2 transition-colors">
       {section.section}
     </h3>
     <ul className="space-y-1">
@@ -159,13 +159,13 @@ const Sidebar: React.FC<SidebarProps> = ({ docs, type }) => {
   };
 
   return (
-    <nav className="sidebar bg-gray-50 dark:bg-gray-900 p-4 border-r border-gray-200 dark:border-gray-700 h-[calc(100vh-75px)] sticky top-[75px] flex flex-col justify-between transition-colors">
+    <nav className="sidebar bg-muted p-4 border-r border-border h-[calc(100vh-75px)] sticky top-[75px] flex flex-col justify-between transition-colors">
       {/* Header da Sidebar */}
       <div className="mb-6">
-        <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 transition-colors">
+        <h2 className="text-xl font-bold text-foreground mb-2 transition-colors">
           Documentação {type === "internal" ? "Interna" : "Pública"}
         </h2>
-        <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors">
+        <p className="text-sm text-muted-foreground transition-colors">
           Navegue pelas seções
         </p>
       </div>
@@ -222,7 +222,7 @@ const Sidebar: React.FC<SidebarProps> = ({ docs, type }) => {
             value={searchTerm}
             onChange={handleSearchChange}
             onFocus={handleSearchFocus}
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md leading-5 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:placeholder-gray-400 dark:focus:placeholder-gray-500 focus:ring-1 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 sm:text-sm disabled:bg-gray-100 dark:disabled:bg-gray-700 disabled:cursor-not-allowed transition-colors"
+            className="block w-full pl-10 pr-3 py-2 border border-input rounded-md leading-5 bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:placeholder-muted-foreground focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm disabled:bg-muted disabled:cursor-not-allowed transition-colors"
           />
           <SearchPopup
             searchResults={searchResults}
@@ -238,7 +238,7 @@ const Sidebar: React.FC<SidebarProps> = ({ docs, type }) => {
                   setSearchTerm("");
                   setIsSearchVisible(false);
                 }}
-                className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none transition-colors"
+                className="text-muted-foreground hover:text-foreground focus:outline-none transition-colors"
               >
                 <svg
                   className="h-4 w-4"
@@ -275,8 +275,8 @@ const Sidebar: React.FC<SidebarProps> = ({ docs, type }) => {
           to="/"
           className={`flex items-center gap-2 p-2 rounded-md transition-colors ${
             location.pathname === "/"
-              ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-semibold"
-              : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400"
+              ? "bg-primary/20 text-primary font-semibold"
+              : "text-muted-foreground hover:bg-muted hover:text-primary"
           }`}
         >
           <Home size={16} />
@@ -304,8 +304,8 @@ const Sidebar: React.FC<SidebarProps> = ({ docs, type }) => {
       </div>
 
       {/* Footer da Sidebar */}
-      <div className="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700 transition-colors">
-        <div className="text-xs text-gray-500 dark:text-gray-400 text-center transition-colors">
+      <div className="mt-auto pt-4 border-t border-border transition-colors">
+        <div className="text-xs text-muted-foreground text-center transition-colors">
           <div className="font-medium">InBot Docs</div>
           <div>v1.0.0</div>
         </div>

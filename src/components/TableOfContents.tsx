@@ -167,8 +167,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent }) => {
   }
 
   return (
-    <div className="xl:sticky xl:top-[92px] bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 xl:max-h-[80vh] xl:overflow-y-auto transition-colors">
-      <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4 border-b border-gray-200 dark:border-gray-700 pb-2 transition-colors">
+    <div className="xl:sticky xl:top-[92px] bg-card border border-border rounded-lg p-4 xl:max-h-[80vh] xl:overflow-y-auto transition-colors">
+      <h3 className="text-lg font-semibold text-foreground mb-4 border-b border-border pb-2 transition-colors">
         📋 Índice
       </h3>
 
@@ -183,11 +183,11 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent }) => {
               onClick={() => handleHeadingClick(item.id)}
               className={`
                 w-full text-left text-sm py-1.5 px-2 rounded transition-colors duration-200
-                hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-700 dark:hover:text-blue-400
+                hover:bg-primary/10 hover:text-primary
                 ${
                   isActive
-                    ? "bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 font-medium border-l-2 border-blue-500 dark:border-blue-400"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+                    ? "bg-accent/20 text-accent font-medium border-l-2 border-accent"
+                    : "text-muted-foreground hover:text-accent"
                 }
               `}
               style={{ paddingLeft }}
@@ -200,7 +200,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent }) => {
       </nav>
 
       {tocItems.length > 0 && (
-        <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700 text-xs text-gray-500 dark:text-gray-400 transition-colors">
+        <div className="mt-4 pt-3 border-t border-border text-xs text-muted-foreground transition-colors">
           {tocItems.length} {tocItems.length === 1 ? "seção" : "seções"}
         </div>
       )}
