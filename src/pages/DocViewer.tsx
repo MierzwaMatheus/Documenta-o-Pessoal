@@ -142,11 +142,11 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
   }
 
   return (
-    <div className="p-4 md:p-8 max-w-7xl mx-auto">
-      <div className="flex flex-col xl:flex-row gap-8">
+    <div className="p-2 sm:p-4 md:p-8 max-w-full sm:max-w-7xl mx-auto overflow-hidden">
+      <div className="flex flex-col xl:flex-row gap-4 md:gap-8 w-full">
         {/* Conteúdo principal */}
         <div className="flex-1 min-w-0 order-2 xl:order-1">
-          <article className="bg-card rounded-lg border border-border p-4 md:p-8 max-w-4xl mx-auto transition-colors">
+          <article className="bg-card rounded-lg border border-border p-3 sm:p-4 md:p-8 max-w-full sm:max-w-4xl mx-auto transition-colors overflow-hidden">
             {/* Cabeçalho do documento */}
             <header className="mb-8 pb-6 border-b border-border transition-colors">
               <h1 className="text-4xl font-bold text-foreground mb-2 transition-colors">
@@ -192,13 +192,13 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
                          prose-p:text-muted-foreground
                          prose-strong:text-foreground
                          prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
-                         prose-pre:bg-muted prose-pre:border prose-pre:border-border
+                         prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-pre:overflow-x-auto
                          prose-blockquote:text-muted-foreground prose-blockquote:border-l-primary
                          prose-a:text-primary hover:prose-a:text-primary/80
-                         prose-table:text-muted-foreground
+                         prose-table:text-muted-foreground prose-table:overflow-x-auto
                          prose-th:text-foreground prose-td:text-muted-foreground
                          prose-img:max-w-full prose-img:h-auto
-                         break-words transition-colors"
+                         break-words transition-colors overflow-hidden"
               dangerouslySetInnerHTML={{ __html: htmlContent }}
             />
           </article>
