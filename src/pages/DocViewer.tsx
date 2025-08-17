@@ -193,6 +193,7 @@ const DocViewer: React.FC<DocViewerProps> = ({ type }) => {
                          prose-strong:text-foreground
                          prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
                          prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-pre:overflow-x-auto
+                         prose-pre:max-w-full prose-pre:w-full
                          prose-blockquote:text-muted-foreground prose-blockquote:border-l-primary
                          prose-a:text-primary hover:prose-a:text-primary/80
                          prose-table:text-muted-foreground prose-table:overflow-x-auto
